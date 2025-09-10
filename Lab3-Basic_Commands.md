@@ -1,83 +1,92 @@
 # Sudo and Admin managment commands
 
-## ✅ 1. sudo – Run Commands as Administrator
 
-### sudo (SuperUser DO) allows you to run commands with root privileges.
+## ✅ 1. **`sudo` – Run Commands as Administrator**
 
+`sudo` (SuperUser DO) allows you to run commands with root privileges.
+
+```bash
 sudo command
+```
 
 Example:
 
-sudo apt update
-
-ss
-
-sudo reboot
+```bash
+sudo apt update      # Run package update as admin
+sudo reboot          # Reboot system
+```
 
 You'll usually be prompted to enter your password.
 
-## ✅ 2. User Management (Linux/macOS only)
+---
 
-### 👤 adduser – Create a New User
+## ✅ 2. **User Management (Linux/macOS only)**
 
+### 👤 `adduser` – Create a New User
+
+```bash
 sudo adduser newusername
+```
 
-ss
+You’ll be prompted to set a password and user info.
 
-You'll be prompted to set a password and user info.
+### 🔑 `passwd` – Change User Password
 
-
-### 🔑 passwd – Change User Password
-
+```bash
 sudo passwd newusername
+```
 
-ss
+---
 
-### 👥 usermod – Modify User Account
+### 👥 `usermod` – Modify User Account
 
 Add a user to a group:
 
+```bash
 sudo usermod -aG groupname username
+```
 
 Example:
 
-sudo usermod -aG sudo alice
+```bash
+sudo usermod -aG sudo alice     # Give 'alice' sudo access
+```
 
-ss
+---
 
-### ❌ deluser – Delete a User
+### ❌ `deluser` – Delete a User
 
+```bash
 sudo deluser username
+```
 
 To remove the user's home directory:
 
-ss
-
-To remove the user's home directory:
-
+```bash
 sudo deluser --remove-home username
+```
 
-## ✅ 3. File Permissions with chmod and chown
+---
 
-### 🔐 chmod – Change File Permissions
+## ✅ 3. **File Permissions with `chmod` and `chown`**
+
+### 🔐 `chmod` – Change File Permissions
 
 Basic syntax:
 
+```bash
 chmod [permissions] file
+```
 
-Common Usage:
+#### Common Usage:
 
-chomd 755 script.sh
+```bash
+chmod 755 script.sh     # Owner: read/write/execute; others: read/execute
+chmod +x file.sh        # Add execute permission
+chmod -x file.sh        # Remove execute permission
+```
 
-ss
-
-chmod +x file.sh
-
-ss
-
-chmod -x file.sh
-
-ss
+### 🔢 What Do Numbers Mean?
 
 | Number | Permission             |
 | ------ | ---------------------- |
@@ -89,38 +98,149 @@ ss
 
 Example:
 
+```bash
 chmod 644 file.txt
+# Owner: read/write, Group: read, Others: read
+```
 
-### 👑 chown – Change File Owner
+---
 
+### 👑 `chown` – Change File Owner
+
+```bash
 sudo chown user:group file
+```
 
 Example:
 
+```bash
 sudo chown alice:alice myfile.txt
+```
 
-ss
+---
 
-## ✅ 4. Disk Usage & System Info
+## ✅ 4. **Disk Usage & System Info**
 
-### 💽 df – Disk Space Usage
+### 💽 `df` – Disk Space Usage
 
+```bash
 df -h
+```
 
-Shows mounted partitions with human-readable
+Shows mounted partitions with human-readable sizes.
 
-### 📁 du – Directory Size
+---
 
+### 📁 `du` – Directory Size
+
+```bash
 du -sh folder_name
+```
 
-ss
+---
 
-### 🖥️ top – Live System Processes
+### 🖥️ `top` – Live System Processes
 
-top 
+```bash
+top
+```
 
-Press q to quit.
+Press `q` to quit.
 
-Alternative htop (better UI, needs to be installed)
+Alternative: `htop` (better UI, needs to be installed)
 
-## ✅ 5. Networking Commands
+---
+
+## ✅ 5. **Networking Commands**
+
+### 🌐 `ping` – Check Network Connectivity
+
+```bash
+ping google.com
+```
+
+Press `CTRL + C` to stop.
+
+---
+
+### 📶 `ifconfig` or `ip a` – Show IP Address & Network Info
+
+```bash
+ip a
+```
+
+```bash
+ifconfig   # May require sudo or installation
+```
+
+---
+
+### 🔍 `netstat` – Show Active Network Connections
+
+```bash
+netstat -tuln
+```
+
+Or use:
+
+```bash
+ss -tuln   # Faster alternative
+```
+
+---
+
+## ✅ 6. **Package Management**
+
+### For **Ubuntu/Debian (APT)**:
+
+```bash
+sudo apt update            # Refresh package list
+sudo apt upgrade           # Upgrade installed packages
+sudo apt install git       # Install a package
+sudo apt remove git        # Uninstall a package
+```
+
+---
+
+### For **macOS (Homebrew)**:
+
+```bash
+brew install git
+```
+
+---
+
+## ✅ 7. **Process Management**
+
+### 🔎 `ps` – Show Running Processes
+
+```bash
+ps aux
+```
+
+### 🔫 `kill` – Kill a Process
+
+```bash
+kill <PID>
+```
+
+Example:
+
+```bash
+kill 12345
+```
+
+Force kill:
+
+```bash
+kill -9 12345
+```
+
+---
+
+## ✅ 8. **Shutdown and Reboot**
+
+```bash
+sudo shutdown now        # Immediate shutdown
+sudo shutdown -r now     # Immediate reboot
+```

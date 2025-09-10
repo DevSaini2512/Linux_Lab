@@ -11,9 +11,8 @@
  echo "My name is $name ansd I am $age year old."  - printing name and age
 ```
 #### OUTPUT :
-![Image](<Screenshot from 2025-09-08 00-43-35.png>)
-![Image](<Screenshot from 2025-09-08 00-44-11.png>)
-
+![alt text](image-1.png)
+![alt text](<Screenshot from 2025-09-10 21-28-19.png>)
 
 # 🔧 script 2
 
@@ -31,9 +30,8 @@ if [ $a=" akshat" ] && [ $b -lt 18 ]; then       -checking conditions and using 
 fi
 
 ```
-![Image](<Screenshot from 2025-09-08 01-07-53.png>)
-![Image](<Screenshot from 2025-09-08 01-11-20.png>)
-
+![alt text](<Screenshot from 2025-09-10 21-39-35.png>)
+![alt text](image-2.png)
 
 ### 🔧 Q1 what is the purpose of #!/bin/bash at the top of the script
 

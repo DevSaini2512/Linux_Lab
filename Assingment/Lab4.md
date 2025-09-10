@@ -4,7 +4,7 @@
 
 # ✅1.⁠ ⁠backup.sh Script
 Create a new file named backup.sh inside your project folder:
-![Image](<Screenshot from 2025-09-09 14-48-55.png>)
+![alt text](<Screenshot from 2025-09-10 22-07-00.png>)
 
 # ✅ 2. Make Script Executable
 Run the following command once:
@@ -13,15 +13,15 @@ chmod 777 backup.sh
 
 # ✅ 3. Testing the script
 ## 1. Create some samples .txt files:
-![Image](<Screenshot from 2025-09-09 14-46-10-1.png>)
+![alt text](<Screenshot from 2025-09-10 22-15-27.png>)
 ## 2. Run the script:
 
 ./backup.sh
-![Image](<Screenshot from 2025-09-09 14-46-43.png>)
+![alt text](image-4.png)
 ## 3. Check the backup/folder:
 
 ls backup/
-![Image](<Screenshot from 2025-09-09 20-07-30.png>)
+
 
 # 🔧 LAB4– File & Backup Automation
 
@@ -71,7 +71,7 @@ world.txt
 ### Output
 Files copied into ⁠ backup/ ⁠ with timestamps:
 
-![Image](<Screenshot from 2025-09-09 20-10-08.png>)
+![alt text](<Screenshot from 2025-09-10 22-17-19.png>)
 ### 🛠️ Q1-What is the difference between cp,mv,and rsync?
 
      ans=cp-Copies files or directories

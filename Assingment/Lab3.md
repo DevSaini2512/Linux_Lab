@@ -16,9 +16,8 @@ if [ $a=" akshat" ] && [ $b -lt 18 ]; then       ---checking conditions and usin
 fi
 
 ```
-![Image](<Screenshot from 2025-09-08 01-07-53-1.png>)
-![Image](<Screenshot from 2025-09-08 01-11-20-1.png>)
-
+![alt text](image-3.png)
+![alt text](<Screenshot from 2025-09-10 21-47-06.png>)
 ##  modified script
 
 ```
@@ -38,11 +37,11 @@ fi
 ```
 ## the difference between the original and modified script is that in the first one we check for fixed value and in the next case we check for all cases .
 
-![Image](<Screenshot from 2025-09-08 17-21-03.png>)
+![alt text](<Screenshot from 2025-09-10 22-03-12.png>)
 
 ## checking with differnt examples
 #### output is :
-![Image](<Screenshot from 2025-09-08 17-19-45.png>)
+![alt text](<Screenshot from 2025-09-10 22-03-47.png>)
 
 ### Q1=differnce between $1,$@ and $# in bash?
 
